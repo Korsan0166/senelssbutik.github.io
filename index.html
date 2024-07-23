@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Şenel Butik</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li class="active"><a href="#">Anasayfa</a></li>
+        <li><a href="#">Koleksiyon</a></li>
+        <li><a href="#">Mağazalar</a></li>
+        <li><a href="#">Hakkımızda</a></li>
+        <li><a href="#">İletişim</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>Şenel Butik</h1>
+      <h2>Şıklığın Adresi</h2>
+    </div>
+  </header>
+
+  <main>
+    <section id="featured-products">
+      <h2>Öne Çıkan Ürünler</h2>
+      <div class="product-list">
+        <!-- Ürünlerin görselleri ve bilgileri eklenecek -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <p>Şenel Butik</p>
+      <p>Adres: İstanbul, Türkiye</p>
+      <p>Telefon: 0XXX XXX XX XX</p>
+    </div>
+    <div class="social-media">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+  * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+header {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:hover {
+  color: #999;
+}
+
+.hero {
+  margin-top: 100px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 28px;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  width: 300px;
+  margin: 0 15px 15px;
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-media a {
+  margin: 0 10px;
+  color: #333;
+}
+
+.social-media a:hover {
+  color: #999;
+}
+// Arka plan resimlerini sürekli değiştirme fonksiyonu
+const backgroundImages = ["background1.jpg", "background2.jpg", "background3.jpg"];
+let currentImageIndex = 0;
+
+function changeBackgroundImage() {
+  const header = document.querySelector("header");
+  header.style.backgroundImage = `url('images/${backgroundImages[currentImageIndex]}')`;
+  currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+}
+
+setInterval(changeBackgroundImage, 5000);
